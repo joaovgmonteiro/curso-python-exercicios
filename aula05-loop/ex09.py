@@ -4,11 +4,18 @@ Escreva um algoritmo em Python que leia uma opção escolhida pelo usuário e fa
 2- escolha dois valores e diga quem é o maior entre eles ou se são iguais
 3- escolha um valor e calcule o dobro mostrando para o usuário o resultado.
 '''
-situ = True
-while situ == True:
+# continue - pula para a próxima iteração do loop
+
+while True:
     print(15* "=")
     print("1-Par/Ímpar \n2-Maior/Menor \n3-Calcular dobro ")
-    op = int(input("Escolha uma opção: "))
+
+    # Tratamento da escolha da opção
+    try:
+        op = int(input("Escolha uma opção: "))
+    except ValueError:
+        print("Erro: Por favor, digite um número válido.")
+        continue
 
     match op:
         case 1: # Par/impar
@@ -36,8 +43,9 @@ while situ == True:
             print("Opção Inválida")
     cont = input("Você quer continuar o programa s/n ?")
     if cont == "n":
-        situ = False
-    else:
-        situ = True
+        break
+
+# O print ocorre quando sai do loop, ou seja, quando o programa é finalizado (O usuário digita n).
+print("Programa finalizado!")   
 
         
