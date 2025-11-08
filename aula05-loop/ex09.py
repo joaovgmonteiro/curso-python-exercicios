@@ -41,7 +41,7 @@ while True:
             print(f"O dobro de {n3} = {dobro}")
         case _:
             print("Opção Inválida")
-    cont = input("Você quer continuar o programa s/n ?")
+    cont = input("Você quer continuar o programa s/n ?").lower()
     if cont == "n":
         break
 
