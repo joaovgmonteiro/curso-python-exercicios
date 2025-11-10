@@ -11,4 +11,4 @@ print(f"\n========== TABUADA DO {num} ==========")
 for i in range(0,11):
     multi = i * num
     print(f"{num} * {i} = {multi}")
-
+    
