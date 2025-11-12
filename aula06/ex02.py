@@ -1,8 +1,6 @@
-"""
-ex02) Com a estrutura FOR, mostre os números entre 500 e 600 na tela.
+# numeros pares
 
-"""
-
-print("Números entre 500 e 600: ")
-for i in range(500, 601):
-    print(i)
+numeros = [2,5,8,11,14,17,20]
+for n in numeros:
+    if n % 2 == 0:
+        print(n)
