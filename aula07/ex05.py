@@ -51,6 +51,22 @@ def determinar_cargo(salario: float) -> str:
 def calcular_salario_liquido(salario: float, inss: float, vale: float, bonus: float) -> float:
     return salario - (inss + vale) + bonus
 
+def exibir_relatorio(
+    nome: str,
+    cargo: str,
+    salario_bruto: float,
+    inss: float,
+    vale_transporte: float,
+    bonus: float,
+    salario_liquido: float
+) -> None: # Saída está como none pq vai ser prints
+    print("="*20)
+    print(f"Nome: {nome} | Cargo: {cargo.upper()} | Salário Bruto: R$ {salario_bruto}")
+    print(f"INSS: - R$ {inss:.2f} | Vale Transporte: - R$ {vale_transporte:.2f}")
+    print(f"Bonus: + R$ {bonus}")
+    print(f"Salário Líquido: R$ {salario_liquido:.2f}")
+    print("="*20)
+
 # Programa principal
 def main():
     # Entrada de dados
@@ -62,7 +78,7 @@ def main():
         return
 
     # INSS
-    valor_inss = calcular_inss(salario_bruto)
+    valor_inss = calcular_inss(salario_bruto) # Poderia utilizar desconto_inss
     # vale transporte
     valor_vale_transporte = calcular_vale_transporte(salario_bruto)
     # bonus
@@ -73,11 +89,7 @@ def main():
     salario_liquido = calcular_salario_liquido(salario_bruto, valor_inss, valor_vale_transporte, valor_bonus)
 
     # Saída de dados
-    print("="*20)
-    print(f"Nome: {nome} | Cargo: {tipo_cargo.upper()} | Salário Bruto: R$ {salario_bruto}")
-    print(f"INSS: - R$ {valor_inss:.2f} | Vale Transporte: - R$ {valor_vale_transporte:.2f}")
-    print(f"Bonus: + R$ {valor_bonus}")
-    print(f"Salário Líquido: R$ {salario_liquido:.2f}")
+    exibir_relatorio(nome, tipo_cargo, salario_bruto, valor_inss, valor_vale_transporte, valor_bonus, salario_liquido)
 
 
 if __name__ == "__main__":
