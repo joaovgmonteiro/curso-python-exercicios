@@ -15,17 +15,20 @@ def tamanho_lista(lista):
     return len(lista)
 
 def main():
-    numeros = []
+    try:
+        numeros = []
 
-    print("Digite 10 números inteiros: ")
-    for i in range(1,10):
-        num  = int(input(f"Digite o {i}º número: "))
-        numeros.append(num)
+        print("Digite 10 números inteiros: ")
+        for i in range(1,10):
+            num  = int(input(f"Digite o {i}º número: "))
+            numeros.append(num)
     
-    print("\nLista digitada: ", numeros)
-    print("Maior valor: ", maior_valor(numeros))
-    print("Menor valor: ", menor_valor(numeros))
-    print("Tamanho da lisa: ", tamanho_lista(numeros))
+        print("\nLista digitada: ", numeros)
+        print("Maior valor: ", maior_valor(numeros))
+        print("Menor valor: ", menor_valor(numeros))
+        print("Tamanho da lisa: ", tamanho_lista(numeros))
+    except ValueError:
+        print("Erro: Valor digitado inválido.")
 
 
 if __name__ == "__main__":

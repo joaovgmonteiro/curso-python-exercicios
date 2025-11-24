@@ -18,9 +18,12 @@ def conceito_nota(nota: float) -> str:
     return conceito
 
 # programa principal
-nome_aluno = input("Digite o nome do aluno: ")
-nota_aluno = float(input(f"Digite a nota do aluno({nome_aluno}): "))
+try:
+    nome_aluno = input("Digite o nome do aluno: ")
+    nota_aluno = float(input(f"Digite a nota do aluno({nome_aluno}): "))
 
-conceito = conceito_nota(nota_aluno)
+    conceito = conceito_nota(nota_aluno)
 
-print(f"Aluno: {nome_aluno} | Nota: {nota_aluno} | Conceito: {conceito}")
+    print(f"Aluno: {nome_aluno} | Nota: {nota_aluno} | Conceito: {conceito}")
+except ValueError:
+    print("Erro: Valor inválido")
