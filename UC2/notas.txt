@@ -55,4 +55,7 @@ aula_001_series\Scripts\activate
 bibliotecas = Ferramenteas especificas
 frameworks = estruturas completas
 
+pd.Series : Cria uma estrutura de dados unidimensional (como uma coluna do excel)
+pd.DataFrame : Cria uma tabela com linhas e colunas (como uma planilha inteira)
 
+DataSet = "planilha organizada de dados"
