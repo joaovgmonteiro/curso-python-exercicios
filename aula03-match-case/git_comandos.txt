@@ -1,0 +1,41 @@
+======== Git comandos ========
+
+git init -> Inicia o git 
+git add .  -> prepara as alterações para o commit
+Podemos utilizar o: 
+git add index.html -> para especificar qual alteração quer preparar para o commit
+git commit -m "Primeiro commit" -> Realiza o commit 
+
+
+======== Navegar entre branchs ========
+
+git branch -> Mostra qual a branch que estamos
+git checkout -b nome-da-minha-branch  -> Cria uma nova branch a partir da que estou, ou seja, pega os dados da atual e passa para a nova branch.
+git checkout nome-da-minha-branch
+git checkout master
+
+
+======== Merge ========
+git merge master -> Mescla os dados de um brench para outra (ex.: mescla os dados de nome-da-minha-branch para o master)
+
+======== Repositórios remotos (GitHub) ========
+
+Push -> Retira os arquivos da máquina local e envia para a nuvem
+
+git remote add origin http://github.com/joaovicmonteiro/meu-projeto.git
+git push origin nome-da-minha-brench  -> Vai colocar a brench citada e os arquivos que estão nela no repositório indicado.
+
+pull -> retira os arquivos da nuvem e envia para a máquina local 
+
+git pull origin noma-da-minha-branch
+
+
+git fetch -> Faz a sincronização das informações da nuvem para a maquina local.
+
+
+======== Alguns outros comandos ========
+
+git log
+git status
+git diff
+

@@ -1,0 +1,18 @@
+Pandas -> Framework | manipulação e análise de dados
+
+python -m venv virtual -> Criação do ambiente virtual no diretório.
+virtual\Scripts\activate -> Ativa o ambiente virtual.
+pip install pandas -> Instala o pandas
+
+Não se deve commitar o ambiente virtual para o github. Deve-se adicionar o ambiente no arquivo
+.gitignore -> Ele vai adicionar todos os demais arquivos, menos o conteúdo da pasta em questão.
+
+Lista as dependências: pip freeze > requirements.txt
+
+Para quem for baixar o conteúdo remoto para uma nova máquina, vai criar um ambiente virtual e 
+irá utilizar o arquivo requirements.txt para instalar as dependências necessárias:
+
+pip install -r requirements.txt
+
+Trabalhar com planilha do Excel com pandas precisa instalar uma extensão:
+pip install openpyxl
